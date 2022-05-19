@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- services -->
+    <!-- more bean definitions for services go here -->
+    
+<!--     <bean id="address" class="com.mindgate.pojo.Address" scope="prototype"> -->
+<!--      <constructor-arg name="addressId" value="100"></constructor-arg> -->
+<!--       <constructor-arg name="street" value="ABC"></constructor-arg> -->
+<!--         <constructor-arg name="city" value="Mumbai"></constructor-arg> -->
+<!--              <constructor-arg name="state" value="Maharashtra"></constructor-arg> -->
+<!--    </bean> -->
+   
+   
+   
+<!--    <bean id="employee" class="com.mindgate.pojo.Employee" scope="prototype"> -->
+<!--    <property name="homeAddress" ref="address"></property> -->
+<!--    <constructor-arg name="employeeId" value="100"></constructor-arg> -->
+<!--       <constructor-arg name="name" value="Tej"></constructor-arg> -->
+<!--         <constructor-arg name="salary" value="2000"></constructor-arg> -->
+<!--         <constructor-arg name="homeAddress" ref="address"></constructor-arg> -->
+
+<!--    </bean> -->
+
+    <bean id="homeAddress" class="com.mindgate.pojo.Address" scope="prototype">
+    <property name="addressId" value="100"></property> 
+       <property name="street" value="ABC"></property> 
+        <property name="city" value="Mumbai"></property> 
+             <property name="state" value="Maharashtra"></property> 
+  </bean> 
+   
+   
+   
+ <bean id="employee" class="com.mindgate.pojo.Employee"  scope="prototype" autowire ="byName"> 
+  <!--   <bean id="employee" class="com.mindgate.pojo.Employee"  scope="prototype" autowire ="byType">       -->
+  
+
+       
+      <property name="employeeId" value="100"></property> 
+       <property name="name" value="Tej"></property> 
+        <property name="salary" value="2000"></property> 
+        
+
+    </bean> 
+
+
+
+</beans>
